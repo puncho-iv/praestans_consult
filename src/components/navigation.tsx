@@ -1,17 +1,21 @@
+import { UserIcon } from "../assets/icons";
 import LightButton from "./LightButton";
+import Logo from "./logo";
 import PrimaryButton from "./PrimaryButton";
 
 interface INavigation {
   activeNav: "home" | "about" | "pricing" | "contact";
+  isAuthenticated: boolean;
+  user?: {
+    name: string;
+  
+  };
 }
 
-const Navigation = ({ activeNav }: INavigation) => {
+const Navigation = ({ activeNav, isAuthenticated, user }: INavigation) => {
   return (
-    <div className="grid grid-cols-3 justify-between bg-black max-h-[120px] py-12 place-items-center sticky top-0 z-50">
-      <h3 className="text-white text-[32px] font-extrabold mt-auto items-center flex">
-        Swift
-        <span className="!font-semibold text-[var(--primary-color)]">POs</span>
-      </h3>
+    <div className="grid grid-cols-3 justify-between bg-black max-h-[120px] py-8 place-items-center sticky top-0 z-50">
+      <Logo />
 
       <nav>
         <ul className="text-white flex gap-12">
@@ -47,14 +51,27 @@ const Navigation = ({ activeNav }: INavigation) => {
       </nav>
 
       <div className="flex flx-row gap-3">
-        <LightButton
-          title={"Sign in"}
-          containerStyles="border !border-[var(--white-100)] rounded-xl min-w-[200px] !text-white"
-        />
-        <PrimaryButton
-          title={"Try for Free"}
-          containerStyles="!bg-[var(--white-100)] rounded-xl min-w-[200px] h-14"
-        />
+        {isAuthenticated ? (
+          <div className="flex items-center space-x-3">
+            <UserIcon />
+            <span>{user?.name}</span>
+          </div>
+        ) : (
+          <>
+            <a href="/signin">
+              <LightButton
+                title={"Sign in"}
+                containerStyles="border !border-[var(--white-100)] rounded-xl min-w-[150px] !text-white hover:bg-[var(--text-color-30)] !hover:text-[var(--text-color-100)] "
+              />
+            </a>
+            <a href="/signup">
+              <PrimaryButton
+                title={"Sign up"}
+                containerStyles="!bg-[var(--white-100)] rounded-xl min-w-[180px] h-14"
+              />
+            </a>
+          </>
+        )}
       </div>
     </div>
   );

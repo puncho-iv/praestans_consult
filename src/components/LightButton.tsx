@@ -13,7 +13,7 @@ export const LightButton: React.FC<LightButtonProps> = ({
 }) => {
   return (
     <button
-      className={` ${containerStyles} rounded-full border border-[var(--primary-color20)] w-full hover:bg-[var(--primary-color)] hover:text-[var(--white-100)]  `}
+      className={` ${containerStyles} rounded-full border border-[var(--primary-color20)] w-full  `}
       onClick={onClick}
     >
       <div className="flex items-center gap-2 px-3  ">

@@ -45,7 +45,7 @@ const home = () => {
   }, []);
   return (
     <div>
-      <Navigation activeNav={activeNav} />
+      <Navigation activeNav={activeNav} isAuthenticated={false} />
 
       <section id="home">
         <Header />
