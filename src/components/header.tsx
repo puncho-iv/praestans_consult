@@ -17,16 +17,16 @@ const header = () => {
         </span>
       </div>
 
-      <div className="justify-center flex mt-20 gap-5 ">
+      <div className="justify-center flex flex-col lg:flex-row mt-20 gap-5 ">
         <PrimaryButton
           title={"Buy Premium Access"}
-          containerStyles=" h-14 rounded-xl max-w-[250px] text-[var(--white-100)] "
+          containerStyles=" h-14 rounded-xl max-w-[250px] min-w-[230px]  text-[var(--white-100)] "
         />
         <a href="https://pos-mjsq.onrender.com/">
           {" "}
           <LightButton
             title={"Start-Free Trial"}
-            containerStyles=" h-14 rounded-xl max-w-[200px] text-[var(--primary-color)] font-semibold "
+            containerStyles=" h-14 rounded-xl min-w-[230px] max-w-[250px] text-[var(--primary-color20)] font-semibold "
           />
         </a>
       </div>

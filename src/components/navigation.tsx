@@ -1,4 +1,5 @@
-import { UserIcon } from "../assets/icons";
+import { useState } from "react";
+import { MenuIcon, UserIcon } from "../assets/icons";
 import LightButton from "./LightButton";
 import Logo from "./logo";
 import PrimaryButton from "./PrimaryButton";
@@ -13,11 +14,17 @@ interface INavigation {
 }
 
 const Navigation = ({ activeNav, isAuthenticated, user }: INavigation) => {
+  const [menuState, setMenuState ] = useState(false)
   return (
-    <div className="grid grid-cols-3 justify-between bg-black max-h-[120px] py-8 place-items-center sticky top-0 z-50">
+    <div className=" bg-black max-h-[120px] py-8 place-items-center sticky top-0 z-50">
+      <div className="flex justify-between items-center">
       <Logo />
 
-      <nav>
+      <div onClick={()=>setMenuState(!menuState)} className="block lg:hidden" >
+        <MenuIcon  />
+      </div>
+
+      <nav className="hidden lg:block">
         <ul className="text-white flex gap-12">
           <li
             className={`${
@@ -73,6 +80,7 @@ const Navigation = ({ activeNav, isAuthenticated, user }: INavigation) => {
           </>
         )}
       </div>
+    </div>
     </div>
   );
 };

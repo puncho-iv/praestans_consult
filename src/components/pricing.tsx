@@ -2,13 +2,13 @@ import PricingCard from "./pricingCard";
 
 const pricing = () => {
   return (
-    <div className="bg-black p-24 min-h-screen" id="#pricing">
-      <h3 className="text-5xl flex justify-center text-white text-center mb-12">
+    <div className="bg-black p-12 lg:p-24 min-h-screen" id="#pricing">
+      <h3 className=" text-3xl lg:text-5xl flex justify-center text-white text-center mb-12">
         We believe we created the most efficient point of sale <br /> for our
         users
       </h3>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-2">
         <PricingCard
           price={2000}
           title={"Basic"}

@@ -13,21 +13,58 @@ const contact = () => {
       "message"
     ) as HTMLTextAreaElement | null;
 
-    // Check if any of the elements are null before accessing their value
-    if (nameElement && emailElement && messageElement) {
-      const name = nameElement.value;
-      const email = emailElement.value;
-      const message = messageElement.value;
+    // Clear previous error messages
+    const errorMessages = document.querySelectorAll(".error-message");
+    errorMessages.forEach((error) => error.remove());
 
-      // Constructing the mailto link
-      const mailtoLink = `mailto:unicusdnl@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage:%0D%0A${encodeURIComponent(
-        message
-      )}`;
+    let isValid = true;
 
-      window.location.href = mailtoLink; // Redirect to mailto link
-    } else {
-      console.error("One or more input fields are null");
+    // Input validation
+    if (nameElement && !nameElement.value.trim()) {
+      showError(nameElement, "Please enter your name.");
+      isValid = false;
     }
+    if (emailElement && !validateEmail(emailElement.value)) {
+      showError(emailElement, "Please enter a valid email address.");
+      isValid = false;
+    }
+    if (messageElement && !messageElement.value.trim()) {
+      showError(messageElement, "Please enter a message.");
+      isValid = false;
+    }
+
+    // If validation fails, stop execution
+    if (!isValid) return;
+
+    const name = nameElement.value;
+    const email = emailElement.value;
+    const message = messageElement.value;
+
+    // Constructing the mailto link
+    const mailtoLink = `mailto:unicusdnl@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage:%0D%0A${encodeURIComponent(
+      message
+    )}`;
+
+    try {
+      window.location.href = mailtoLink; // Redirect to mailto link
+    } catch (error) {
+      console.error("Failed to open email client.", error);
+      alert("Failed to open email client. Please try again later.");
+    }
+  };
+
+  // Function to show error message below the input
+  const showError = (element: HTMLElement, message: string) => {
+    const errorElement = document.createElement("div");
+    errorElement.textContent = message;
+    errorElement.className = "text-red-500 text-sm mt-1 error-message";
+    element.parentNode?.appendChild(errorElement);
+  };
+
+  // Email validation function
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   return (
@@ -81,6 +118,7 @@ const contact = () => {
         <div className="py-3">
           <h3 className="text-xl font-semibold">Name</h3>
           <input
+            id="name"
             type="text"
             className="border border-gray-300 rounded-lg w-full p-3 mt-2"
             placeholder="Your Name"
@@ -91,6 +129,7 @@ const contact = () => {
         <div className="py-3">
           <h3 className="text-xl font-semibold">Email</h3>
           <input
+            id="email"
             type="email"
             className="border border-gray-300 rounded-lg w-full p-3 mt-2"
             placeholder="Your Email"
@@ -101,6 +140,7 @@ const contact = () => {
         <div className="py-3">
           <h3 className="text-xl font-semibold">Message</h3>
           <textarea
+            id="message"
             className="border border-gray-300 rounded-lg w-full p-3 mt-2"
             placeholder="Your Message"
           ></textarea>

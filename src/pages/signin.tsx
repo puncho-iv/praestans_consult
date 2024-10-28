@@ -40,7 +40,7 @@ const signin = () => {
           <div className="mt-4">
             <h3>Password</h3>
             <input
-              type="text"
+              type="password"
               id="password"
               placeholder="*******"
               className="mt-1"

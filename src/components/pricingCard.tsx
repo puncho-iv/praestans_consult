@@ -10,11 +10,12 @@ interface IPriceCard {
 
 const PricingCard = ({ price, title, features, button }: IPriceCard) => {
   return (
-    <div className="max-w-lg bg-white p-12 rounded-xl">
+<div className="">
+<div className="max-w-lg bg-white p-5 lg:p-12 rounded-xl ">
       {/* Pricing Header */}
       <div className="text-center border-b border-[var(--text-color-100)] py-5">
         <h3 className="font-semibold text-2xl text-[var(--placeholder)]">{title}</h3>
-        <h3 className="text-5xl font-bold mt-2 text-[var(--text-color-100)]">
+        <h3 className="text-5xl font-extrabold mt-2 text-[var(--text-color-100)]">
           GHS {price}
         </h3>
       </div>
@@ -40,6 +41,7 @@ const PricingCard = ({ price, title, features, button }: IPriceCard) => {
         />
       </div>
     </div>
+</div>
   );
 };
 
