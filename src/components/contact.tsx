@@ -3,28 +3,22 @@ import PrimaryButton from "./PrimaryButton";
 
 const contact = () => {
   const handleSendEmail = () => {
-    const nameElement = document.getElementById(
-      "name"
-    ) as HTMLInputElement | null;
-    const emailElement = document.getElementById(
-      "email"
-    ) as HTMLInputElement | null;
-    const messageElement = document.getElementById(
-      "message"
-    ) as HTMLTextAreaElement | null;
-
+    const nameElement = document.getElementById("name") as HTMLInputElement | null;
+    const emailElement = document.getElementById("email") as HTMLInputElement | null;
+    const messageElement = document.getElementById("message") as HTMLTextAreaElement | null;
+  
     // Clear previous error messages
     const errorMessages = document.querySelectorAll(".error-message");
     errorMessages.forEach((error) => error.remove());
-
+  
     let isValid = true;
-
+  
     // Input validation
     if (nameElement && !nameElement.value.trim()) {
       showError(nameElement, "Please enter your name.");
       isValid = false;
     }
-    if (emailElement && !validateEmail(emailElement.value)) {
+    if (emailElement && (!emailElement.value || !validateEmail(emailElement.value))) {
       showError(emailElement, "Please enter a valid email address.");
       isValid = false;
     }
@@ -32,19 +26,19 @@ const contact = () => {
       showError(messageElement, "Please enter a message.");
       isValid = false;
     }
-
+  
     // If validation fails, stop execution
     if (!isValid) return;
-
-    const name = nameElement.value;
-    const email = emailElement.value;
-    const message = messageElement.value;
-
+  
+    const name = nameElement?.value;
+    const email = emailElement?.value;
+    const message = messageElement?.value;
+  
     // Constructing the mailto link
     const mailtoLink = `mailto:unicusdnl@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage:%0D%0A${encodeURIComponent(
-      message
+      message || ""
     )}`;
-
+  
     try {
       window.location.href = mailtoLink; // Redirect to mailto link
     } catch (error) {
@@ -52,6 +46,7 @@ const contact = () => {
       alert("Failed to open email client. Please try again later.");
     }
   };
+  
 
   // Function to show error message below the input
   const showError = (element: HTMLElement, message: string) => {
