@@ -4,8 +4,8 @@ import Hero from "../assets/headerImage.png";
 
 const header = () => {
   return (
-    <div className="flex flex-col justify-center min-h-screen bg-black max-h-[300px]   pt-24 px-20">
-      <div className="flex flex-col items-center mt-64 ">
+    <div className="flex flex-col justify-center lg:min-h-screen bg-black lg:max-h-[300px] max-h-[500px] pt-6  lg:pt-24 px-20">
+      <div className="flex flex-col items-center mt-6 lg:mt-64 ">
         <span className="text-white text-[22px] text-center mb-4">
           PROBLEM SOLVING
         </span>
@@ -17,7 +17,7 @@ const header = () => {
         </span>
       </div>
 
-      <div className="justify-center flex flex-col lg:flex-row mt-20 gap-5 ">
+      <div className="justify-center flex flex-row px-12 lg:px-0 mt-20 gap-5 pb-12 lg:pb-0 ">
         <PrimaryButton
           title={"Buy Premium Access"}
           containerStyles=" h-14 rounded-xl max-w-[250px] min-w-[230px]  text-[var(--white-100)] "
@@ -26,12 +26,12 @@ const header = () => {
           {" "}
           <LightButton
             title={"Start-Free Trial"}
-            containerStyles=" h-14 rounded-xl min-w-[230px] max-w-[250px] text-[var(--primary-color20)] font-semibold "
+            containerStyles=" hidden lg:flex h-14 rounded-xl min-w-[230px] max-w-[250px] text-[var(--primary-color20)] font-semibold "
           />
         </a>
       </div>
 
-      <div className="flex  justify-center lg:mt-auto mt-42 px-32  ">
+      <div className="hidden lg:flex  justify-center lg:mt-auto mt-42 px-32  ">
         <img src={Hero} alt="Hero" className="rounded-t-2xl mt-24" />
       </div>
     </div>

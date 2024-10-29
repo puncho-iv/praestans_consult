@@ -63,10 +63,10 @@ const contact = () => {
   };
 
   return (
-    <div className="px-64 py-32 grid grid-cols-2 gap-12" id="contact">
+    <div className="lg:px-64 px-20 py-32 grid grid-cols-1 lg:grid-cols-2 gap-12" id="contact">
       {/* Contact Information Section */}
       <div>
-        <h3 className="text-5xl">Get in touch with us</h3>
+        <h3 className="lg:text-5xl flex items-center text-4xl min-w-[350px] ">Get in touch with us</h3>
 
         {/* Phone Number Section */}
         <div className="mt-24 flex items-center gap-5">
