@@ -1,4 +1,4 @@
-import LightButton from "./LightButton";
+// import LightButton from "./LightButton";
 import PrimaryButton from "./PrimaryButton";
 import Hero from "../assets/headerImage.png";
 
@@ -18,15 +18,19 @@ const header = () => {
       </div>
 
       <div className="justify-center flex flex-row px-12 lg:px-0 mt-20 gap-5 pb-12 lg:pb-0 ">
-        <PrimaryButton
+        {/* <PrimaryButton
           title={"Buy Premium Access"}
           containerStyles=" h-14 rounded-xl max-w-[250px] min-w-[230px]  text-[var(--white-100)] "
-        />
+        /> */}
         <a href="https://pos-mjsq.onrender.com/">
           {" "}
-          <LightButton
+          {/* <LightButton
             title={"Start-Free Trial"}
-            containerStyles=" hidden lg:flex h-14 rounded-xl min-w-[230px] max-w-[250px] text-[var(--primary-color20)] font-semibold "
+            containerStyles=" hidden lg:flex h-14 rounded-xl min-w-[150px] max-w-[180px] text-[var(--primary-color20)] font-semibold "
+          /> */}
+          <PrimaryButton
+            title={" Get Started "}
+            containerStyles=" h-14 rounded-xl max-w-[200px] min-w-[180px]  text-[var(--white-100)] "
           />
         </a>
       </div>

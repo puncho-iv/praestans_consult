@@ -145,7 +145,7 @@ const contact = () => {
         <div className="mt-6">
           <PrimaryButton
             title="Send Message"
-            containerStyles="h-14 rounded-xl text-white bg-[var(--primary-color)] max-w-[250px]"
+            containerStyles="h-14 rounded-xl text-white bg-[var(--primary-color)] max-w-[200px]"
             onClick={handleSendEmail}
           />
         </div>
