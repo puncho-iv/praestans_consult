@@ -10,12 +10,12 @@ const pricing = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-2">
         <PricingCard
-          price={2000}
+          price={500}
           title={"Basic"}
           features={[
             { name: "Inventory Management", available: true },
             { name: "Sales Reporting", available: true },
-            { name: "Multi-Location Support", available: true },
+            { name: "Multi-Location Support", available: false },
             { name: "Customer Management (CRM)", available: false },
             { name: "Employee Management", available: true },
             { name: "Up to 2 Email Accounts", available: true },
@@ -26,7 +26,7 @@ const pricing = () => {
           button={"Buy Now🚀"}
         />
         <PricingCard
-          price={4000}
+          price={600}
           title={"Stellar"}
           features={[
             { name: "Inventory Management", available: true },
@@ -42,7 +42,7 @@ const pricing = () => {
           button={"Buy Now🚀"}
         />
         <PricingCard
-          price={6000}
+          price={700}
           title={"Pro"}
           features={[
             { name: "Inventory Management", available: true },

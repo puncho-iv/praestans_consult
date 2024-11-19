@@ -8,10 +8,12 @@ const Footer = () => {
           Simple Tools to manage all in one place{" "}
         </h3>
         <div className="p-12 flex flex-end justify-end">
-          <PrimaryButton
-            title={"Get Started"}
-            containerStyles="rounded-full !text-white min-w-[150px] max-w-[150px]"
-          />
+          <a href="https://pos-mjsq.onrender.com/">
+            <PrimaryButton
+              title={"Get Started"}
+              containerStyles="rounded-full !text-white min-w-[150px] min-w-[150px]"
+            />
+          </a>
         </div>
       </div>
       <footer className="bg-black">
