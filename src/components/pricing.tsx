@@ -53,7 +53,7 @@ const pricing = () => {
             { name: "Unlimited Email Accounts", available: true },
             { name: "Customer USSD payments methods", available: true },
             { name: "Full Customization", available: true },
-            { name: "Free Webpage", available: true },
+            { name: "Free Webpage", available: false },
           ]}
           button={"Buy Now🚀"}
         />
