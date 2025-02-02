@@ -31,11 +31,11 @@ const serviceList = [
     title: "Survey Design & Administration",
     point: ["Questionnaire development", "Data collection and management"],
   },
-  {
-    number: "5",
-    title: "Strategic Consultancy",
-    point: ["Market entry strategies", "Performance optimizations"],
-  },
+  // {
+  //   number: "5",
+  //   title: "Strategic Consultancy",
+  //   point: ["Market entry strategies", "Performance optimizations"],
+  // },
 ];
 
 const Services = () => {

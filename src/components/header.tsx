@@ -8,9 +8,9 @@ const Header = () => {
         <div className="flex flex-col justify-center  max-w-[1440px] mx-auto mt-auto ">
           {/* Top Navigation */}
           <div className="flex justify-between p-6 ">
-            <Button className="rounded-full bg-[var(--primary-color)] p-5 hover:bg-[var(--primary-color)]">
+            {/* <Button className="rounded-full bg-[var(--primary-color)] p-5 hover:bg-[var(--primary-color)]">
               Talk to an expert
-            </Button>
+            </Button> */}
             <Menu />
             <div className="flex justify-end items-center">
               <Button className="rounded-full bg-[var(--primary-color)] p-5 hover:bg-[var(--primary-color)] text-md h-12 px-8">

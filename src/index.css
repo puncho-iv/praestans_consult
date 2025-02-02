@@ -18,10 +18,12 @@
 :root {
   font-family: Syne;
   --primary-color: #E63946 ;
+  --brown-color: #3B1E1E;
   --light-text: #5D5656;
   --gray: #F4F4F4;
   --gray-bg: #E7E4E4;
   --text-color: #676767;
+
 }
 
 

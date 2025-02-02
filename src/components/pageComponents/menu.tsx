@@ -10,7 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+  // navigationMenuTriggerStyle,
 } from "../ui/navigation-menu"
 import { Link } from "react-router-dom"
 
@@ -37,7 +37,7 @@ export function Menu() {
     <NavigationMenu>
       <NavigationMenuList className="text-white gap-5">
       <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link to="/">
             <NavigationMenuLink className="text-white text-md hover:text-[var(--primary-color)] font-medium ">
               HOME
             </NavigationMenuLink>
@@ -60,14 +60,14 @@ export function Menu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link to="/docs" >
             <NavigationMenuLink className="text-md hover:text-[var(--primary-color)] font-medium">
               WHO WE ARE
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link to="/docs">
             <NavigationMenuLink className="text-md hover:text-[var(--primary-color)] font-medium">
               CONTACT US
             </NavigationMenuLink>
