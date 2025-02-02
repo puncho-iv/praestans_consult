@@ -1,45 +1,38 @@
-// import LightButton from "./LightButton";
-import PrimaryButton from "./PrimaryButton";
-import Hero from "../assets/headerImage.png";
+import { Menu } from "../components/pageComponents/menu";
+import { Button } from "../components/ui/button";
 
-const header = () => {
+const Header = () => {
   return (
-    <div className="flex flex-col justify-center lg:min-h-screen bg-black lg:max-h-[300px] max-h-[500px] pt-6  lg:pt-24 px-20">
-      <div className="flex flex-col items-center mt-6 lg:mt-64 ">
-        <span className="text-white text-[22px] text-center mb-4">
-          PROBLEM SOLVING
-        </span>
-        <h1 className="text-center text-white text-5xl md:text-6xl lg:text-7xl font-semibold mb-2">
-          Comprehensive
-        </h1>
-        <span className="text-3xl md:text-4xl lg:text-5xl font-medium  text-white  text-center mt-0">
-          business solutions for all.
-        </span>
-      </div>
+    <header>
+      <div className="h-full lg:w-full lg:min-h-[600px] bg-gradient-to-r from-[#000000] via-[#571C1C] to-[#9D4444]">
+        <div className="flex flex-col justify-center  max-w-[1440px] mx-auto mt-auto ">
+          {/* Top Navigation */}
+          <div className="flex justify-between p-6 ">
+            <Button className="rounded-full bg-[var(--primary-color)] p-5 hover:bg-[var(--primary-color)]">
+              Talk to an expert
+            </Button>
+            <Menu />
+            <div className="flex justify-end items-center">
+              <Button className="rounded-full bg-[var(--primary-color)] p-5 hover:bg-[var(--primary-color)] text-md h-12 px-8">
+                Talk to an expert
+              </Button>
+            </div>
+          </div>
 
-      <div className="justify-center flex flex-row px-12 lg:px-0 mt-20 gap-5 pb-12 lg:pb-0 ">
-        {/* <PrimaryButton
-          title={"Buy Premium Access"}
-          containerStyles=" h-14 rounded-xl max-w-[250px] min-w-[230px]  text-[var(--white-100)] "
-        /> */}
-        <a href="https://pos-mjsq.onrender.com/">
-          {" "}
-          {/* <LightButton
-            title={"Start-Free Trial"}
-            containerStyles=" hidden lg:flex h-14 rounded-xl min-w-[150px] max-w-[180px] text-[var(--primary-color20)] font-semibold "
-          /> */}
-          <PrimaryButton
-            title={" Get Started "}
-            containerStyles=" h-14 rounded-xl max-w-[200px] min-w-[180px]  text-[var(--white-100)] "
-          />
-        </a>
-      </div>
+          {/* Center Content */}
 
-      <div className="hidden lg:flex  justify-center lg:mt-auto mt-42 px-32  ">
-        <img src={Hero} alt="Hero" className="rounded-t-2xl mt-24" />
+          <div className="flex flex-col items-center p-12">
+            <h3 className="header leading-[2.5rem] md:leading-[3rem] lg:leading-[4.5rem]  text-center xl:max-w-6xl lg:py-12 lg:mt-10 text-white text-3xl font-semibold">
+              <span className="text-[var(--primary-color)]">Unlocking</span> the power of revolutionized data-driven decision making
+            </h3>
+            <Button className="mt- rounded-full bg-[var(--primary-color)] p-5 hover:bg-[var(--primary-color)] px-8 text-md h-12">
+              Get Started Now
+            </Button>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 
-export default header;
+export default Header;
