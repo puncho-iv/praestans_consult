@@ -4,13 +4,13 @@ import Stata from "../../assets/images/logo-blue(1).png";
 
 const technology = () => {
   return (
-    <div className="px-48 -mt-8">
-      <div className="flex lg:gap-32 bg-gray-200 p-8 justify-center rounded-xl items-center">
-        <img src={SPSS} alt="Stata logo" className="w-36" />
-        <ExcelLogo size={70} />
-        <PythonLogo size={70} />
-        <TableauLogo size={70} />
-        <img src={Stata} alt="SPSS Logo" className="w-36" />
+    <div className="px-48 mt-12 relative">
+      <div className="flex lg:gap-32 p-8 justify-center  items-center">
+        <img src={SPSS} alt="Stata logo" className="w-24" />
+        <ExcelLogo size={35} />
+        <PythonLogo size={35} />
+        <TableauLogo size={35} />
+        <img src={Stata} alt="SPSS Logo" className="w-24" />
       </div>
     </div>
   );

@@ -10,11 +10,11 @@ const team = () => {
           backgrounds
         </h3>
 
-        <div className="flex px-20 py-10 gap-2">
+        <div className="flex px-20 py-10 gap-8">
           <TeamCard role={"Founder"} name={"Mr Eric Karibayeng Arwaa"} bio={""} image={""}/>
           <TeamCard role={""} name={""} bio={""} image={""}/>
           <TeamCard role={""} name={""} bio={""} image={""}/>
-          <TeamCard role={""} name={""} bio={""} image={""}/>
+          {/* <TeamCard role={""} name={""} bio={""} image={""}/> */}
         </div>
       </div>
     </div>

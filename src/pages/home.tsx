@@ -1,10 +1,8 @@
-import CaseStudies from "../components/case";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Technology from "../components/pageComponents/technology";
-import Process from "../components/process";
-import Services from "../components/services";
+import Service from "../components/service"
 import Team from "../components/team";
 
 const home = () => {
@@ -15,30 +13,31 @@ const home = () => {
       </section>
 
       <section>
-        <Process />
+     <div className="mt-auto flex justify-center">
+     <Technology />
+     </div>
+      <Service />
       </section>
-
+{/* 
       <section className="bg-white">
         <Services />
       </section>
 
-      <div>
-        <Technology />
-      </div>
+  
 
       <section className="py-12">
         <CaseStudies />
-      </section>
+      </section> */}
 
-      <section className="py-12 ">
+      <section className="py-12 bg-white ">
         <Team />
       </section>
 
-      <section className="bg-white">
+      <section className="">
         <Contact />
       </section>
 
-      <section>
+      <section className="bg-black">
         <Footer />
       </section>
     </div>
