@@ -26,7 +26,7 @@ const Contact = () => {
           <Input placeholder="Phone number" className="h-12" />
           <Textarea placeholder="Leave us a message..." />
 
-          <Button className="h-12 text-md bg-[var(--primary-color)] mt-6">
+          <Button className="h-12 text-md bg-[var(--primary-btn)] mt-6">
             Submit
           </Button>
         </form>
@@ -41,7 +41,7 @@ const Contact = () => {
               <h3 className="font-medium text-lg ">00233 (0) 246414019</h3>
             </div>
           </div>
-          {/* Visit US */}
+          {/* Visit Us */}
           <div className=" flex flex-col">
             <h2 className="text-[18px] font-bold text-gray-800">Visit us </h2>
             <h2 className="text-[16px]">Chat to us in person in Accra</h2>

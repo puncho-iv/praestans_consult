@@ -7,7 +7,7 @@ interface ITeamCardProps {
 
 const TeamCard = ({ role, name, bio, image }: ITeamCardProps) => {
   return (
-    <div className="flex flex-col items-center bg-white shadow-lg rounded-2xl overflow-hidden min-w-[350px] min-h-[400px] p-6 text-center">
+    <div className="flex flex-col items-center bg-slate-300  rounded-2x overflow-hidden min-w-[350px] min-h-[400px] p-6 text-center">
       <img
         src={image}
         alt={name}
